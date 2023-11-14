@@ -9,27 +9,43 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 客户1, server: 193.123.241.253, port: 32796, type: vmess, uuid: c83e442c-3e1d-4119-d583-43bbdfd296f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /qwe123, headers: {Host: v2.clare886.tk}}, udp: true}
+  - {name: 首尔1-kh1, server: 140.238.22.178, port: 52777, type: vmess, uuid: a26ce0b5-1cf6-4962-c087-e4f80464e97b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /qwe123zxc, headers: {Host: seoul1.clare88.gq}}, udp: true}
+  - {name: 首尔2-kh1, server: 193.123.235.240, port: 20101, type: vmess, uuid: 7e950a1d-a0c3-430e-8dab-293294c9595a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /qwe121, headers: {Host: seoul2.clare88.gq}}, udp: true}
+  - {name: 首尔3-kh1, server: 193.123.241.253, port: 32796, type: vmess, uuid: c83e442c-3e1d-4119-d583-43bbdfd296f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /qwe123, headers: {Host: v2.clare886.tk}}, udp: true}
+  - {name: 新加坡1-kh1, server: 138.2.110.101, port: 38671, type: vmess, uuid: fff1f181-6a1c-4e16-f749-f8b3d0920708, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ljj098, headers: {Host: sg1.clare88.gq}}, udp: true}
+  - {name: 新加坡2-kh1, server: 213.35.110.247, port: 43635, type: vmess, uuid: 3ddac066-befa-4759-cda9-d31a68d57fe7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /poi123, headers: {Host: sg2.clare88.gq}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 客户1
+      - 首尔1-kh1
+      - 首尔2-kh1
+      - 首尔3-kh1
+      - 新加坡1-kh1
+      - 新加坡2-kh1
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 客户1
+      - 首尔1-kh1
+      - 首尔2-kh1
+      - 首尔3-kh1
+      - 新加坡1-kh1
+      - 新加坡2-kh1
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 客户1
+      - 首尔1-kh1
+      - 首尔2-kh1
+      - 首尔3-kh1
+      - 新加坡1-kh1
+      - 新加坡2-kh1
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -48,7 +64,11 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 客户1
+      - 首尔1-kh1
+      - 首尔2-kh1
+      - 首尔3-kh1
+      - 新加坡1-kh1
+      - 新加坡2-kh1
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -59,20 +79,32 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 客户1
+      - 首尔1-kh1
+      - 首尔2-kh1
+      - 首尔3-kh1
+      - 新加坡1-kh1
+      - 新加坡2-kh1
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 客户1
+      - 首尔1-kh1
+      - 首尔2-kh1
+      - 首尔3-kh1
+      - 新加坡1-kh1
+      - 新加坡2-kh1
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 客户1
+      - 首尔1-kh1
+      - 首尔2-kh1
+      - 首尔3-kh1
+      - 新加坡1-kh1
+      - 新加坡2-kh1
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -88,7 +120,11 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 客户1
+      - 首尔1-kh1
+      - 首尔2-kh1
+      - 首尔3-kh1
+      - 新加坡1-kh1
+      - 新加坡2-kh1
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
